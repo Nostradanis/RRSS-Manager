@@ -10,14 +10,44 @@ import sys
 
 import requests
 
+# En Windows, intentar leer variables de entorno de usuario desde el registro
+if sys.platform == "win32":
+    try:
+        import winreg
+        def _get_user_env(name):
+            try:
+                key = winreg.OpenKey(
+                    winreg.HKEY_CURRENT_USER,
+                    r"Environment",
+                    0,
+                    winreg.KEY_READ
+                )
+                val, _ = winreg.QueryValueEx(key, name)
+                winreg.CloseKey(key)
+                return val
+            except (FileNotFoundError, OSError):
+                return None
+    except ImportError:
+        _get_user_env = lambda n: None
+else:
+    _get_user_env = lambda n: None
+
 API_BASE = "https://api.pinterest.com/v5"
+
+
+def get_pinterest_token():
+    """Obtiene PINTEREST_TOKEN desde el entorno o variables de usuario de Windows."""
+    token = os.environ.get("PINTEREST_TOKEN")
+    if not token and sys.platform == "win32":
+        token = _get_user_env("PINTEREST_TOKEN")
+    return token
 
 
 def get_headers():
     """Obtiene el token y devuelve los headers para la API."""
-    token = os.environ.get("PINTEREST_TOKEN")
+    token = get_pinterest_token()
     if not token:
-        print("Error: Define la variable de entorno PINTEREST_TOKEN con tu token de acceso.")
+        print("Error: Define la variable de entorno PINTEREST_TOKEN (cuenta de usuario en Windows).")
         sys.exit(1)
     return {
         "Authorization": f"Bearer {token}",

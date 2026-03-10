@@ -48,7 +48,7 @@ python publish_pinterest.py
 
 | Variable        | Descripción                    |
 |-----------------|--------------------------------|
-| `PINTEREST_TOKEN` | Token de acceso de la API de Pinterest |
+| `PINTEREST_TOKEN` | Token de acceso de la API de Pinterest. En Windows se lee desde las variables de entorno de la cuenta de usuario. |
 
 ## Última actualización
 
