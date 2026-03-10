@@ -13,6 +13,12 @@ RRSS Manager es una aplicación para gestionar y publicar contenido en redes soc
 - **Contenido**: Política de privacidad RGPD-compliant que describe el tratamiento de datos (tokens OAuth, datos de cuenta, contenido publicado) y los derechos del usuario.
 - **URL pública**: https://nostradanis.github.io/RRSS-Manager/fanpixers-politica-privacidad.html
 
+### Resumen de la aplicación
+
+- **Archivo**: `fanpixers-resumen-app.html`
+- **Propósito**: Página informativa que resume la aplicación RRSS Manager de Fanpixers.
+- **URL pública**: https://nostradanis.github.io/RRSS-Manager/fanpixers-resumen-app.html
+
 ## Integraciones previstas
 
 - **Pinterest API v5**: Publicación de pins con imagen, texto y enlace.
