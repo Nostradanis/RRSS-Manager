@@ -23,6 +23,25 @@ RRSS Manager es una aplicación para gestionar y publicar contenido en redes soc
 
 - **Pinterest API v5**: Publicación de pins con imagen, texto y enlace.
 
+## Aplicación de publicación
+
+### publish_pinterest.py
+
+Script interactivo que publica pins en Pinterest. Solicita:
+
+1. **Tablero**: Lista los tableros del usuario y permite elegir uno por número.
+2. **Texto**: Título (obligatorio, máx. 100 caracteres) y descripción (opcional, máx. 800).
+3. **Enlace**: URL de destino del pin.
+4. **Imagen**: URL pública o ruta a archivo local (JPG, PNG).
+
+**Uso:**
+```bash
+# Con PINTEREST_TOKEN definido
+python publish_pinterest.py
+```
+
+**Dependencias:** `requests` (ver requirements.txt).
+
 ## Configuración
 
 ### Variables de entorno
@@ -33,4 +52,4 @@ RRSS Manager es una aplicación para gestionar y publicar contenido en redes soc
 
 ## Última actualización
 
-10 de marzo de 2025 - Creación de política de privacidad para registro en Pinterest Developers.
+10 de marzo de 2025 - Aplicación publish_pinterest.py para publicar pins con tablero, texto, enlace e imagen.
