@@ -23,6 +23,14 @@ RRSS Manager es una aplicación para gestionar y publicar contenido en redes soc
 
 - **Pinterest API v5**: Publicación de pins con imagen, texto y enlace.
 
+## Configuración
+
+### Variables de entorno
+
+| Variable        | Descripción                    |
+|-----------------|--------------------------------|
+| `PINTEREST_TOKEN` | Token de acceso de la API de Pinterest |
+
 ## Última actualización
 
 10 de marzo de 2025 - Creación de política de privacidad para registro en Pinterest Developers.
