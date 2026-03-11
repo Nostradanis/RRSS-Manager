@@ -50,6 +50,10 @@ python publish_pinterest.py
 |-----------------|--------------------------------|
 | `PINTEREST_TOKEN` | Token de acceso de la API de Pinterest. En Windows se lee desde las variables de entorno de la cuenta de usuario. |
 
+## Documentación
+
+- **docs/PINTEREST_REAPLICACION.md**: Guía para reaplicar al acceso a la API de Pinterest tras un rechazo.
+
 ## Última actualización
 
-10 de marzo de 2025 - Aplicación publish_pinterest.py para publicar pins con tablero, texto, enlace e imagen.
+10 de marzo de 2025 - Guía de reaplicación Pinterest API y aplicación publish_pinterest.py.
